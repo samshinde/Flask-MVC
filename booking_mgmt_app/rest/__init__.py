@@ -54,7 +54,7 @@ redis_conn = redis.StrictRedis(host=entity_mgmt_app.config['REDIS_HOST'], port=6
 
 # Api settings
 api = Api(version='1.0',
-          title='Weddings Forum API',
+          title='Anyserve Forum API',
           doc='/api/v1',
           description='REST API OF Entity Management FORUM BACKEND',
           contact='samshinde23290@gmail.com',

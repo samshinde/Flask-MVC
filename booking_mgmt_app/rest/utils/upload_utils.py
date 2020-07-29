@@ -52,15 +52,7 @@ def get_entities_with_values(file_name, entity_template):
                     field_name_values[item] = ''
                 i = 0
                 for value in row:
-                    if field_names[i] in ['is_required', 'unique']:
-                        if value == "False":
-                            field_name_values[field_names[i]] = False
-                        elif value == "True":
-                            field_name_values[field_names[i]] = True
-                    elif field_names[i] == 'options':
-                        field_name_values[field_names[i]] = value.split("&") if "&" in value else [value]
-                    else:
-                        field_name_values[field_names[i]] = value
+                    field_name_values[field_names[i]] = value
                     i += 1
                 entity_with_values_list.append(field_name_values)
 
@@ -89,15 +81,7 @@ def get_entity_templates_with_values(file_name):
                     field_name_values[item] = ''
                 i = 0
                 for value in row:
-                    if field_names[i] in ['is_required', 'unique']:
-                        if value == "False":
-                            field_name_values[field_names[i]] = False
-                        elif value == "True":
-                            field_name_values[field_names[i]] = True
-                    elif field_names[i] == 'options':
-                        field_name_values[field_names[i]] = value.split("&") if "&" in value else [value]
-                    else:
-                        field_name_values[field_names[i]] = value
+                    field_name_values[field_names[i]] = value
                     i += 1
                 entity_templates_with_values_list.append(field_name_values)
 
@@ -119,25 +103,6 @@ def insert_entity(entity):
         entity_res, entity_id = db_client.create(BOOKING_COLLECTION, custom_marshal(entity, entity))
         print(f"Asset Id: {entity_id} & Name: {entity.get('name')} inserted successfully.")
     return entity_id
-
-
-def insert_entity_template(entity):
-    """
-    Insert entity Or Check whether it is already present.
-    :param entity:
-    :return: Id
-    """
-    _count, _records = db_client.get(ENTITY_TEMPLATE_COLLECTION, {"entity_type": entity.get('entity_type')})
-    if _count >= 1 and _records:
-        entity = _records[0]
-        entity_id = _records[0].get('_id')
-        print(f"Asset Template {_records[0].get('entity_type')} already present")
-    else:
-        entity_res, entity_id = db_client.create(ENTITY_TEMPLATE_COLLECTION, marshal(entity, entity_template))
-        _count, _records = db_client.get(ENTITY_TEMPLATE_COLLECTION, {"entity_type": entity.get('entity_type')})
-        entity = _records[0]
-        print(f"Asset Template with Id: {entity_id} & type: {entity.get('entity_type')} inserted successfully.")
-    return entity_id, entity
 
 
 def insert_entity_type(entity):

@@ -19,7 +19,7 @@ parser.add_argument('params', type=str, location='args')
 
 
 @entity_template_api_ns.route('/<string:entity_type>')
-class AssetTemplateCollection(Resource):
+class EntityTemplateCollection(Resource):
     """
     entity template Collection Operations
     """
@@ -55,7 +55,7 @@ class AssetTemplateCollection(Resource):
 
 
 @entity_template_api_ns.route('/<string:entity_type>/<string:template_id>')
-class AssetTemplateItem(Resource):
+class EntityTemplateItem(Resource):
     """
     entity template Item Operations
     """

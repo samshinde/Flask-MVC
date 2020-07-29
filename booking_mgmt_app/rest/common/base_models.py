@@ -21,14 +21,3 @@ response = api.model('response', {
     'message': fields.String(description='Message'),
     'data': fields.Raw(description='Response data', default={}),
 })
-
-custom_fields = api.model('field', {
-    'name': fields.String(description='Field name', default=''),
-    'value': fields.String(description='Field value', default=''),
-    'type': fields.String(description='Field type', default=''),
-    'is_required': fields.Boolean(description='Is required', default=False),
-    'unique': fields.Boolean(description='Is unique', default=False),
-    'options': fields.List(fields.String(), description='Options can be used', default=[]),
-    'key': fields.String(description='Key', default=''),
-    'is_header': fields.Boolean(description='is_header', default=False),
-})

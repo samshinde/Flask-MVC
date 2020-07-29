@@ -1,14 +1,14 @@
 from flask_restplus import marshal
 
 from rest.utils.db_service import Base
-from rest.common.constants import AUDIT_EVENT
+from rest.common.constants import AUDIT_COLLECTION
 
 from rest.audit.models import audit_response
 
 
 class AuditEventService(Base):
     def get_audits(self, page, size, sort_by, order_by, start_date, end_date):
-        _count, _audits = self.get(AUDIT_EVENT,
+        _count, _audits = self.get(AUDIT_COLLECTION,
                                    {"meta.created": {
                                        "$gte": start_date,
                                        "$lte": end_date

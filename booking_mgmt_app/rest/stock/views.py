@@ -26,41 +26,6 @@ pagination_parser.add_argument('sort_by', type=str, location='args')
 pagination_parser.add_argument('order_by', type=str, location='args')
 
 
-# @api.expect(auth_header_parser)
-# @all_entity_api_ns.route('/')
-# class ListStockHierarchy(Resource):
-#     """
-#     Stocks hierarchy
-#     """
-#
-#     @jwt_required
-#     @api.marshal_with(response)
-#     def get(self):
-#         """
-#         list entities in hierarchical manner
-#         :return:
-#         """
-#         return {"status": SUCCESS, "data": ENTITY_SERVICE.list_entitys_hierarchy(),
-#                 "message": "entities retrieved successfully"}
-#
-#
-# @api.expect(auth_header_parser)
-# @all_entity_api_ns.route('/<string:entity_type>')
-# class ListStockHierarchyByType(Resource):
-#     """
-#     Stocks hierarchy
-#     """
-#
-#     @jwt_required
-#     @api.marshal_with(response)
-#     def get(self, entity_type):
-#         """
-#         list entities in hierarchical manner
-#         :return:
-#         """
-#         return {"status": SUCCESS, "data": ENTITY_SERVICE.list_entitys_hierarchy_by_type(entity_type),
-#                 "message": "entities retrieved successfully"}
-
 
 @api.expect(auth_header_parser)
 @stock_api_ns.route('/<string:stock_type>')
@@ -194,18 +159,3 @@ class DeleteStocks(Resource):
             STOCK_SERVICE.delete_stock(stock_id)
 
         return {"status": SUCCESS, "message": "{} deleted successfully.".format(stock_type)}
-
-# def validate_stock_fields(stock_type, request_data):
-#     if stock_type:
-#         template = TEMPLATE_SERVICE.get_stock_template_by_stock_type(stock_type, raise_error=False)
-#     else:
-#         # raise error
-#         template = TEMPLATE_SERVICE.get_stock_template_by_stock_type(stock_type)
-#
-#     if template:
-#         for field in template[FIELDS]:
-#             if field['is_required']:
-#                 must_not_be_blank(request_data[FIELDS].get(field['key']), field['key'])
-#             if field["unique"]:
-#                 must_not_be_duplicate_value_for_field(STOCK_COLLECTION, stock_type, field['key'],
-#                                                       request_data[FIELDS].get(field['key']))

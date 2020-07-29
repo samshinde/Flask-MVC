@@ -32,9 +32,9 @@ pagination_parser.add_argument('order_by', type=str, location='args')
 
 @api.expect(auth_header_parser)
 @all_entity_api_ns.route('/')
-class ListAssetHierarchy(Resource):
+class ListEntityHierarchy(Resource):
     """
-    Assets hierarchy
+    Entitys hierarchy
     """
 
     @jwt_required
@@ -50,9 +50,9 @@ class ListAssetHierarchy(Resource):
 
 @api.expect(auth_header_parser)
 @all_entity_api_ns.route('/<string:entity_type>')
-class ListAssetHierarchyByType(Resource):
+class ListEntityHierarchyByType(Resource):
     """
-    Assets hierarchy
+    Entitys hierarchy
     """
 
     @jwt_required
@@ -70,7 +70,7 @@ class ListAssetHierarchyByType(Resource):
 @entity_api_ns.route('/<string:entity_type>')
 class EntityCollection(Resource):
     """
-    Asset
+    Entity
     """
 
     @jwt_required
@@ -157,7 +157,7 @@ class EntityCollection(Resource):
 
 @api.expect(auth_header_parser)
 @entity_api_ns.route('/<string:entity_type>/<string:entity_id>')
-class Asset(Resource):
+class Entity(Resource):
     """
     Zone
     """
@@ -207,7 +207,7 @@ class Asset(Resource):
 
 @api.expect(auth_header_parser)
 @entity_api_ns.route('/<string:entity_type>/delete')
-class DeleteAssets(Resource):
+class DeleteEntitys(Resource):
     @jwt_required
     @api.expect(entity_delete_request, validate=True)
     @api.marshal_with(response)

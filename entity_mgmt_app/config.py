@@ -60,7 +60,6 @@ class StagingConfig(Config):
     APP_ROOT = os.path.dirname(os.path.abspath(__file__))
     UPLOAD_PATH = APP_ROOT + "/static/"
     TEMPLATES_PATH = APP_ROOT + "/templates"
-    ANSIBLE_PATH = APP_ROOT + "/tmp/ansible"
 
     # host and port
     HOST = os.getenv('HOST', '0.0.0.0')
