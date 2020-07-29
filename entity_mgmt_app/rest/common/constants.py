@@ -77,6 +77,3 @@ MAINTENANCE = 503
 ROLE_NAME = 'role_name'
 EVENT = 'event'
 RETRY = 3
-# FETCH_PATH = '/home/lab/wdc/fetch_files'
-# UPLOAD_PATH = '/home/lab/wdc/uploads'
-# BACKUP_PATH = '/home/lab/wdc/backup_files'
