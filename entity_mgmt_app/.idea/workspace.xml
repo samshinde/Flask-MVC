@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee0caeb4-f28f-479f-b49e-5347031970de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../auth_app/seed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest/utils/upload_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/entities/marriage_halls.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/entities/vegetables.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/entity_templates/marriage_hall_template.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/entity_templates/vegetable_template.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth_app/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../auth_app/log/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/common/enums.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/common/enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/entity_types/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/entity_types/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s-sandbox/deployments/auth-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s-sandbox/deployments/auth-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s-sandbox/deployments/db-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s-sandbox/deployments/db-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s-sandbox/deployments/entity-mgmt-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s-sandbox/deployments/entity-mgmt-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s-sandbox/deployments/notification-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s-sandbox/deployments/notification-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s-sandbox/deployments/redis-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s-sandbox/deployments/redis-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s-sandbox/secrets/mongo-secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s-sandbox/secrets/mongo-secret.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1VyDZZdQHhtcDPw7EloZXjfv7ce" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.entity_mgmt">
+    <configuration name="entity_mgmt" type="PythonConfigurationType" factoryName="Python">
+      <module name="weddings_app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="not_app" type="PythonConfigurationType" factoryName="Python">
+      <module name="notification_app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../notification_app" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../notification_app/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.entity_mgmt" />
+      <item itemvalue="Python.not_app" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee0caeb4-f28f-479f-b49e-5347031970de" name="Default Changelist" comment="" />
+      <created>1578216497049</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578216497049</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591896154301">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1591896154301" />
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1592304410043">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1592304410043" />
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom" timestamp="1591072285665">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1591072285665" />
+    <state width="1276" height="175" key="GridCell.Tab.0.center" timestamp="1591072285663">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1591072285663" />
+    <state width="1276" height="175" key="GridCell.Tab.0.left" timestamp="1591072285662">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1591072285662" />
+    <state width="1276" height="175" key="GridCell.Tab.0.right" timestamp="1591072285664">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1591072285664" />
+    <state x="205" y="31" key="SettingsEditor" timestamp="1591790293017">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1591790293017" />
+  </component>
+</project>

@@ -1,0 +1,9 @@
+name,value,type,is_required,options,key
+Name,,Text,True,,name
+Type,,Text,True,,type
+Details,,Text,True,,details
+Advantages,,List,True,,advantages
+Expire by,,DateTimePicker,True,,expire_by
+Notes,,Text,False,,notes
+Other Details,,Text,True,,other_details
+Is Available,False,Boolean,True,,is_available

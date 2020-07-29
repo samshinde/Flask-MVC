@@ -1,0 +1,64 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo
+#    volumes:
+#      - db_data:/var/lib/mongodb
+    restart: on-failure
+    ports:
+      - "27017:27017" 
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - db_data:/var/lib/mongodb
+
+  redis:
+    image: redis
+    restart: on-failure
+    ports:
+      - "6379:6379"
+
+  notification-app:
+    build:
+      context: ./notification_app
+      dockerfile: Dockerfile
+    image: notification_app:latest
+    restart: on-failure
+    ports:
+      - "5001:5001"
+
+  auth-app:
+    build:
+      context: ./auth_app
+      dockerfile: Dockerfile
+    image: auth_app:latest
+    depends_on:
+      - mongodb
+    restart: on-failure
+    ports:
+      - "5002:5002"
+    environment:
+      DB_HOST: mongodb
+      REDIS_HOST: redis
+      NOTIFICATION_HOST: notification-app
+
+  entity-mgmt-app:
+    build:
+      context: ./entity_mgmt_app
+      dockerfile: Dockerfile
+    image: entity_mgmt_app:latest
+    depends_on:
+      - mongodb
+    restart: on-failure
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: mongodb
+      REDIS_HOST: redis
+      NOTIFICATION_HOST: notification-app
+
+volumes:
+    db_data: {}

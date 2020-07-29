@@ -1,0 +1,14 @@
+name,value,type,is_required,options,key
+Name,,Text,True,,name
+Hall Type,,Text,True,Garden&Banquet&Closed AC,hall_type
+Contact Person Name,,Text,True,,contact_person_name
+Contact Person Number,,Text,True,,contact_person_number
+Office Number,,Text,True,,office_number
+Details,,List,False,,details
+Is Available,False,Boolean,True,,is_available
+Website,,Text,False,,website
+Email,,Text,True,,email
+Price,,Text,True,,price
+Venue,,Text,True,Birthday&Wedding&Reception,venue
+Capacity,,Text,True,Garden Capacity&Lunch Capacity&Parking Capacity,capacity
+Amenity,,Text,True,Caterer&Decoration&Bramhan&Power Backup&Rooms,amenity
