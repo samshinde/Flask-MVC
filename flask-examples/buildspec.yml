@@ -1,0 +1,19 @@
+
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo pre_build steps...
+      - aws --version
+      - $(aws ecr get-login --region us-east-1 --no-include-email)
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t 543979186133.dkr.ecr.us-east-1.amazonaws.com/clowagen:latest .
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push 543979186133.dkr.ecr.us-east-1.amazonaws.com/clowagen:latest
