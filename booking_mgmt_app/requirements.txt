@@ -21,7 +21,7 @@ marshmallow==2.16.3
 passlib==1.7.1
 pyasn1==0.4.4
 pycparser==2.19
-PyJWT==1.7.1
+PyJWT==2.4.0
 pymongo==3.7.2
 pytz==2018.7
 redis==2.10.6
